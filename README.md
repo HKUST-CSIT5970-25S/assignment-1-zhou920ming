@@ -5,10 +5,9 @@
 
 ---
 
-### Name: 
-### Student Id: 
-### Email: 
-
+### Name: yuming zhou
+### Student Id: 21074406
+### Email: yzhoufu@connect.ust.hk
 ---
 
 ## Question 1: Measure the EC2 CPU and Memory performance
