@@ -54,10 +54,10 @@ it means that the performance of EC2 instances increase commensurate with the in
     | Type                      | TCP b/w (Mbps) | RTT (ms) |
     | ------------------------- | -------------- | -------- |
     | `t3.medium` - `t3.medium` |          4450      |     0.261     |
-    | `m5.large` - `m5.large`   |           4960     |     0.169     |
-    | `c5n.large` - `c5n.large` |         5230       |     0.149     |
-    | `t3.medium` - `c5n.large` |        4780        |     0.672     |
-    | `m5.large` - `c5n.large`  |        5150        |      0.705    |
+    | `m5.large` - `m5.large`   |           4970     |     0.169     |
+    | `c5n.large` - `c5n.large` |         4970       |     0.149     |
+    | `t3.medium` - `c5n.large` |        4730        |     0.672     |
+    | `m5.large` - `c5n.large`  |        4960        |      0.705    |
     | `m5.large` - `t3.medium`  |        4750       |     0.225     |
 
 
@@ -71,8 +71,12 @@ However, for the bandwidth, there is no evidence that the networks between insta
 
     | Connection                | TCP b/w (Mbps) | RTT (ms) |
     | ------------------------- | -------------- | -------- |
-    | N. Virginia - Oregon      |                |          |
-    | N. Virginia - N. Virginia |                |          |
-    | Oregon - Oregon           |                |          |
+    | N. Virginia - Oregon      |        4780        |      0.191    |
+    | N. Virginia - N. Virginia |       4770         |      0.212    |
+    | Oregon - Oregon           |        368       |     61.60     |
  
     > Region: US East (N. Virginia), US West (Oregon). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. All instances are `c5.large`. Note: Use public IP address when using iPerf within the same region.
+
+answer:
+The instances deployed in different regions will have much less bandwidth and much longer RTT than instances deployed in same regions
+The instances deployed in different regions will have much worse network performance than instances deployed in same regions
