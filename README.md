@@ -63,7 +63,9 @@ it means that the performance of EC2 instances increase commensurate with the in
 
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. Note: Use private IP address when using iPerf within the same region. You'll need iPerf for measuring TCP bandwidth and Ping for measuring Round-Trip time.
 
-answer:
+answer: 
+For the RTT, the networks between instances of the same types are more likely to have smaller RTT than these between instances of the different types.
+However, for the bandwidth, there is no evidence that the networks between instances of the same types have more or less bandwidth than these between instances of the different types. from the experiments, either sender or receiver is t3.medium will cause low bandwidth. It suggest that bandwidth depends on capability of sender and receiver. The more powerful sender and receiver are, the more bandwidth. Whether the type of sender and receiver are the same will not influence bandwidth.
 
 3. (1 mark) What about the network performance for instances deployed in different regions? In order to answer this question, you need to complete the following table.
 
