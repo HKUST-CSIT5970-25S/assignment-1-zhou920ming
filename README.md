@@ -14,8 +14,10 @@
 
 1. (1 mark) Report the name of measurement tool used in your measurements (you are free to choose *any* open source measurement software as long as it can measure CPU and memory performance). Please describe your configuration of the measurement tool, and explain why you set such a value for each parameter. Explain what the values obtained from measurement results represent (e.g., the value of your measurement result can be the execution time for a scientific computing task, a score given by the measurement tools or something else).
 
+
  
- answer: i use sysbench. the version is sysbench 1.0.20.
+ answer: 
+ i use sysbench. the version is sysbench 1.0.20.
     
 I use command "sudo sysbench --test=cpu --cpu-max-prime=80000 run" to test the cpu performance. The task generate a lot of prime number to measure the cpu performance. The upper limit for primes generator I set is 80000. It is bigger than default value 10000. The reason I do that is that I want to set a larger value to test the limit of the cpu performance and show more obvious difference between different instance.
     
@@ -36,7 +38,8 @@ For both cpu and memory performance, the results i choose from measurement are t
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI.
 
 
-answer: For cpu performance, t2,medium is very similar with t2.micro. c5d.large has just a little improvement compared with t2.medium.
+answer: 
+For cpu performance, t2,medium is very similar with t2.micro. c5d.large has just a little improvement compared with t2.medium.
     
 For memory performance, t2,medium has very small improvement compared with t2.micro.c5d.large has very large improvement compared with t2.medium.
 
