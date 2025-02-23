@@ -17,7 +17,8 @@
 
  
  answer: 
- i use sysbench. the version is sysbench 1.0.20.
+ 
+i use sysbench. the version is sysbench 1.0.20.
     
 I use command "sudo sysbench --test=cpu --cpu-max-prime=80000 run" to test the cpu performance. The task generate a lot of prime number to measure the cpu performance. The upper limit for primes generator I set is 80000. It is bigger than default value 10000. The reason I do that is that I want to set a larger value to test the limit of the cpu performance and show more obvious difference between different instance.
     
@@ -39,6 +40,7 @@ For both cpu and memory performance, the results i choose from measurement are t
 
 
 answer: 
+
 For cpu performance, t2,medium is very similar with t2.micro. c5d.large has just a little improvement compared with t2.medium.
     
 For memory performance, t2,medium has very small improvement compared with t2.micro.c5d.large has very large improvement compared with t2.medium.
