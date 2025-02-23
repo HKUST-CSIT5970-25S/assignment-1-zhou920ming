@@ -53,7 +53,7 @@ it means that the performance of EC2 instances increase commensurate with the in
 
     | Type                      | TCP b/w (Mbps) | RTT (ms) |
     | ------------------------- | -------------- | -------- |
-    | `t3.medium` - `t3.medium` |          4.45      |          |
+    | `t3.medium` - `t3.medium` |          4450      |     0.281     |
     | `m5.large` - `m5.large`   |                |          |
     | `c5n.large` - `c5n.large` |                |          |
     | `t3.medium` - `c5n.large` |                |          |
