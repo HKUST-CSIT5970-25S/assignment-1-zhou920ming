@@ -14,9 +14,12 @@
 
 1. (1 mark) Report the name of measurement tool used in your measurements (you are free to choose *any* open source measurement software as long as it can measure CPU and memory performance). Please describe your configuration of the measurement tool, and explain why you set such a value for each parameter. Explain what the values obtained from measurement results represent (e.g., the value of your measurement result can be the execution time for a scientific computing task, a score given by the measurement tools or something else).
 
-    >  answer: i use sysbench. the version is sysbench 1.0.20. 
+    >  answer: i use sysbench. the version is sysbench 1.0.20.
+    
 I use command "sudo sysbench --test=cpu --cpu-max-prime=80000 run" to test the cpu performance. The task generate a lot of prime number to measure the cpu performance. The upper limit for primes generator I set is 80000. It is bigger than default value 10000. The reason I do that is that I want to set a larger value to test the limit of the cpu performance and show more obvious difference between different instance.
+    
 I use command "sudo sysbench --test=memory --memory-block-size=4k --memory-total-size=800M run" to test the memory performance. The task write data to memory to measure the cpu performance. The memory block size I set is 4k. It should be the power of 2 and in real world it is usually optimum size. i.e.not too big or too small . The memory total size is 800M. it is not a small value so it can show obvious difference between different instance.
+
 For both cpu and memory performance, the results i choose from measurement are total time. i.e execution time for a given task. Because for a given task,  the less execution time is, the faster the task is. And speed is very important consideration for performance of task.
 
 2. (1 mark) Run your measurement tool on general purpose `t2.micro`, `t2.medium`, and `c5d.large` Linux instances, respectively, and find the performance differences among these instances. Launch all the instances in the **US East (N. Virginia)** region. Does the performance of EC2 instances increase commensurate with the increase of the number of vCPUs and memory resource?
@@ -31,7 +34,9 @@ For both cpu and memory performance, the results i choose from measurement are t
 
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI.
     > answer: For cpu performance, t2,medium is very similar with t2.micro. c5d.large has just a little improvement compared with t2.medium.
+    
 For memory performance, t2,medium has very small improvement compared with t2.micro.c5d.large has very large improvement compared with t2.medium.
+
 it means that the performance of EC2 instances increase commensurate with the increase of the number of vCPUs and memory resource, but very little performance improvement on CPU. it mainly improve the memory performance.
 
 ## Question 2: Measure the EC2 Network performance
