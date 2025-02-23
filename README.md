@@ -54,15 +54,18 @@ it means that the performance of EC2 instances increase commensurate with the in
     | Type                      | TCP b/w (Mbps) | RTT (ms) |
     | ------------------------- | -------------- | -------- |
     | `t3.medium` - `t3.medium` |          4450      |     0.281     |
-    | `m5.large` - `m5.large`   |                |          |
-    | `c5n.large` - `c5n.large` |                |          |
-    | `t3.medium` - `c5n.large` |                |          |
-    | `m5.large` - `c5n.large`  |                |          |
-    | `m5.large` - `t3.medium`  |                |          |
+    | `m5.large` - `m5.large`   |           4960     |     0.169     |
+    | `c5n.large` - `c5n.large` |         4960       |     0.152     |
+    | `t3.medium` - `c5n.large` |        4650        |     0.672     |
+    | `m5.large` - `c5n.large`  |        4960        |      0.705    |
+    | `m5.large` - `t3.medium`  |        4750       |     0.188     |
+
 
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. Note: Use private IP address when using iPerf within the same region. You'll need iPerf for measuring TCP bandwidth and Ping for measuring Round-Trip time.
 
-2. (1 mark) What about the network performance for instances deployed in different regions? In order to answer this question, you need to complete the following table.
+answer:
+
+3. (1 mark) What about the network performance for instances deployed in different regions? In order to answer this question, you need to complete the following table.
 
     | Connection                | TCP b/w (Mbps) | RTT (ms) |
     | ------------------------- | -------------- | -------- |
